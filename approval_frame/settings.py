@@ -203,6 +203,10 @@ LOGGING = {
     }
 }
 
+#Some environments like Heroku like to store config in environment variables.
+#Grab all of the environment varibles and add them as globals.
+globals().update(os.environ)
+
 # Any other variables local to the development environment should be
 # declared in the local_settings.py file and are imported here.
 try:
