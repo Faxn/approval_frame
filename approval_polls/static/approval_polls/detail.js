@@ -160,8 +160,10 @@ $(function () {
     window.location.reload();
   };
 
-  time_difference = document.getElementById('time_difference').value;
-
-  $('#timer').countdown(onZero, Math.ceil(time_difference));
+  time_difference = document.getElementById('time_difference')
+  
+  if(time_difference){
+    $('#timer').countdown(onZero, Math.ceil(time_difference.value));
+  }
 
 });
